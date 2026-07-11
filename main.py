@@ -39,7 +39,7 @@ def analyze_diff_for_bugs(diff: str) -> str:
     """Ask OpenAI for a structured QA review of a code diff."""
     client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
     response = client.chat.completions.create(
-        model="gpt-5.6",
+        model="gpt-4o",
         messages=[
             {
                 "role": "system",
